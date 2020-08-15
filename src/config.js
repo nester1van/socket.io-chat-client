@@ -1,5 +1,5 @@
 const config = {
-  SERVER: 'socket-io-chat-server-1.herokuapp.com' || 'localhost:5000'
+  SERVER: process.env.PORT || 'localhost:5000'
 };
-
+// 'socket-io-chat-server-1.herokuapp.com'
 export default config;
