@@ -10,7 +10,7 @@ import { userLiveRoomSocket } from '../../../../../../redux/rooms/actions';
 //     history.push("/home");
 //   }
 
-const RoomItem = ({roomName, currentRoom, userLiveRoomSocket }) => {
+const RoomItem = ({userID, roomName, currentRoom, userLiveRoomSocket }) => {
 
   let history = useHistory();
 
@@ -30,15 +30,19 @@ const RoomItem = ({roomName, currentRoom, userLiveRoomSocket }) => {
         onClick={handleClickGoToRoom}
         disabled = {roomName === currentRoom}
       >go to room</button>
-      <button 
-        onClick={handleClickDeleteRoom} 
-        disabled = {roomName === currentRoom}
-      >delete room</button>
+      { roomName !== userID ? 
+        <button 
+          onClick={handleClickDeleteRoom} 
+          disabled = {roomName === currentRoom}
+        >delete room</button> : null
+      }
+      
     </li>
   )
 };
 
 const mapStateToProps = (state) => ({
+  userID: state.user.userID,
   currentRoom: state.rooms.currentRoom
 });
 

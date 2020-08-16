@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { connect } from 'react-redux';
 import { Redirect, useLocation } from 'react-router-dom';
 import { userJoinRoomSocket, setCurrentRoom, userLiveRoomSocket } from '../../redux/rooms/actions';
@@ -7,9 +7,8 @@ import ChatMessageForm from './ChatMessageForm/ChatMessageForm';
 import ChatBody from './ChatBody/ChatBody';
 import ChatAside from './ChatAside/ChatAside';
 
-const ChatPage = ({ userName, setCurrentRoom, userJoinRoomSocket }) => {
-
-
+const ChatPage = ({ userID, userName, setCurrentRoom, userJoinRoomSocket }) => {
+  
   const useQuery = () => {
     return new URLSearchParams(useLocation().search);
   };
@@ -22,6 +21,12 @@ const ChatPage = ({ userName, setCurrentRoom, userJoinRoomSocket }) => {
   if (!userName) {
     userName = localStorage.getItem('userName');
   }
+
+  useEffect(() => {
+    userJoinRoomSocket(userID);
+    userJoinRoomSocket(roomName);
+    setCurrentRoom(roomName);    
+  }, [userID]);
 
   return (
     <>
@@ -39,6 +44,7 @@ const ChatPage = ({ userName, setCurrentRoom, userJoinRoomSocket }) => {
 };
 
 const mapStateToProps = (state) => ({
+  userID: state.user.userID,
   userName: state.user.userName
 });
 
