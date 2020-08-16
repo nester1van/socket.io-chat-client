@@ -9,8 +9,7 @@ const RoomsList = ({ rooms, currentRoom }) => {
 
   return (
     <ul>
-      {rooms.filter(room => room.roomName === currentRoom)
-      .map(room => <RoomItem key={room.roomName} roomName={room.roomName}/>)}   
+      {rooms.map(room => <RoomItem key={room.roomName} roomName={room.roomName}/>)}   
     </ul>
   )
 };

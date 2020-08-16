@@ -26,7 +26,10 @@ const RoomItem = ({roomName, currentRoom, userLiveRoomSocket }) => {
   return (
     <li>
       {roomName}
-      <button onClick={handleClickGoToRoom}>go to room</button>
+      <button 
+        onClick={handleClickGoToRoom}
+        disabled = {roomName === currentRoom}
+      >go to room</button>
       <button 
         onClick={handleClickDeleteRoom} 
         disabled = {roomName === currentRoom}
