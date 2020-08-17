@@ -42,7 +42,6 @@ export const listenUsersInRoomSocket = () => (dispatch, getState) => {
   const socket = getState().user.socket;
   if (socket) {
     socket.on('users in room', ({ roomName, usersInRoom }) => {
-      console.log('roomName ', roomName, 'usersInRoom ', usersInRoom);
       dispatch(userJoinRoom(roomName, usersInRoom));
     });
   }

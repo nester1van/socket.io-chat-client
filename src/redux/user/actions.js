@@ -27,10 +27,8 @@ export const connectSocket = () => (dispatch, getState) => {
   if (!socket){ // only one socket
     const { SERVER } = config;
     const socket = io(SERVER);
-    // console.log(socket);
     socket.emit('users manager', {method: 'getUserIdAndName'}, 
     ({ userID, userName }) => {
-      console.log(userID, userName);
       dispatch(setUserID(userID));
       dispatch(setUserName(userName));
     })
