@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import ScrollToBottom from 'react-scroll-to-bottom';
 import Message from './Message/Message';
+import './chatBody.css';
 
 const ChatBody = ({ messages, currentRoom }) => {
     //   messages: Array(1)
@@ -27,6 +28,7 @@ const ChatBody = ({ messages, currentRoom }) => {
         return (
           <Message 
             key={userID + date}
+            userID={userID}
             userName={userName}
             time={time}
             message={message}

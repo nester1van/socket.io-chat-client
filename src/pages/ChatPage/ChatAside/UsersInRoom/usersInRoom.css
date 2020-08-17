@@ -1,0 +1,12 @@
+.users-in-room {
+  padding-bottom: 20px;
+  border-bottom: 5px solid #f3f3f3;
+}
+
+.users-in-room__title {
+  color: #555;
+}
+
+.users-in-room__list {
+  color: #555;
+}

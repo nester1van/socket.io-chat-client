@@ -1,13 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ButtonUserLeaveChat from './ButtonUserLeaveChat/ButtonUserLeaveChat';
+import './chatHeader.css';
 
 const ChatHeader = ({ currentRoom }) => {
   return (
-    <>
-      <h3>{currentRoom}</h3>
+    <div className='chat-header'>
+      <h3 className='chat-header__title'>you're in room: {currentRoom}</h3>
       <ButtonUserLeaveChat/>
-    </>
+    </div>
   )
 };
 

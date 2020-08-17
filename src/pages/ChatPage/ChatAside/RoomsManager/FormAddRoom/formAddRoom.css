@@ -1,0 +1,29 @@
+.form-add-room {
+  border-bottom: 5px solid #f3f3f3;
+}
+
+.form-add-room__input {
+  border: 1px solid #aaa;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  outline: none;
+  padding: 5px;
+  margin: 10px 0;
+}
+
+.form-add-room__submit {
+  cursor: pointer;
+  border: 1px solid #0f5cdc;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 5px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #2979ff;
+  transition: background-color .2s linear;
+}
+
+.form-add-room__submit:hover {
+  background-color: #0f5cdc;
+}

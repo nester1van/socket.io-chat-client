@@ -6,6 +6,7 @@ import ChatHeader from './ChatHeader/ChatHeader';
 import ChatMessageForm from './ChatMessageForm/ChatMessageForm';
 import ChatBody from './ChatBody/ChatBody';
 import ChatAside from './ChatAside/ChatAside';
+import './chatPage.css';
 
 const ChatPage = ({ userID, userName, setCurrentRoom, userJoinRoomSocket }) => {
   
@@ -32,13 +33,16 @@ const ChatPage = ({ userID, userName, setCurrentRoom, userJoinRoomSocket }) => {
     <>
 
       { !userName ?  <Redirect to={`/`}/> : 
-      <>       
-        Chat page
-        <ChatHeader/>
-        <ChatAside/>
-        <ChatBody/>
-        <ChatMessageForm/>
-      </>}
+      <div className='chat-page'>   
+        <div className='chat-page__container'>
+          <ChatHeader/>
+          <ChatBody/>
+          <ChatMessageForm/>        
+        </div>    
+        <div className='chat-page__aside'>
+          <ChatAside/>
+        </div>
+      </div>}
     </>
   )
 };

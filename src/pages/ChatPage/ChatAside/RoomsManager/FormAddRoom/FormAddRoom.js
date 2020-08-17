@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { userJoinRoomSocket } from '../../../../../redux/rooms/actions';
+import './formAddRoom.css';
 
 const FormAddRoom = ({ userJoinRoomSocket }) => {
   

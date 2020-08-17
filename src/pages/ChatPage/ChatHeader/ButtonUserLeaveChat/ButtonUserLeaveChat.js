@@ -1,4 +1,5 @@
 import React from 'react';
+import './buttonUserLeaveChat.css';
 
 const ButtonUserLeaveChat = () => {
 
@@ -7,9 +8,11 @@ const ButtonUserLeaveChat = () => {
   };
 
   return (
-    <>
-      <a href='/' onClick={handleClick}>Leave Chat</a>
-    </>
+      <a 
+        className='btn-leave-chat' 
+        href='/' 
+        onClick={handleClick}
+      >Leave Chat</a>
   )
 };
 

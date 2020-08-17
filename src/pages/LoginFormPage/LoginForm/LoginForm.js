@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { setUserNameSocket } from '../../../redux/user/actions';
+import './loginForm.css';
 
 const LoginForm = ({ setUserNameSocket }) => {
 
@@ -16,6 +17,7 @@ const LoginForm = ({ setUserNameSocket }) => {
       className='login-form' 
       onSubmit={handleSubmit}
     >  
+      <h1 className='login-form__title'>Welcome to chat</h1>
       <input 
         className='login-form__input-name' 
         type='text' 

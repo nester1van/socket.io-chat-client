@@ -6,9 +6,7 @@ import LocalStorage from './components/LocalStorage/LocalStorage';
 import Pages from './pages/Pages/Pages';
 import './App.css';
 
-let socket;
-
-function App() {
+const App = () => {
 
   return (
     <Provider store={store}>

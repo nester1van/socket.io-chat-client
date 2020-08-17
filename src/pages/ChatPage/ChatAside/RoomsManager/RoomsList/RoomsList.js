@@ -8,7 +8,7 @@ const RoomsList = ({ rooms, currentRoom }) => {
   
 
   return (
-    <ul>
+    <ul className='rooms-list'>
       {rooms.map(room => <RoomItem key={room.roomName} roomName={room.roomName}/>)}   
     </ul>
   )

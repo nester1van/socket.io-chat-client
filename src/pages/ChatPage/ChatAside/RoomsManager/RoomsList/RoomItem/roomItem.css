@@ -1,0 +1,42 @@
+.room-item {
+  padding: 5px;
+  border-bottom: 2px solid #f3f3f3;
+}
+
+.room-item__title {
+  display: inline-block;
+  padding-right: 5px;
+  width: 195px;
+  color: #555;
+}
+
+.room-item__btn-group {
+  display: inline-block;
+}
+
+.room-item__btn-go-to-room,
+.room-item__btn-delete-room {
+  cursor: pointer;
+  color: #fff;
+  background-color: #2979ff;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 2px;
+  transition: background-color .2s ease;
+}
+
+.room-item__btn-go-to-room:hover,
+.room-item__btn-delete-room:hover {
+  background-color: #0f5cdc;
+}
+
+.room-item__btn-delete-room:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.room-item__btn-delete-room:disabled:hover {
+  background: #2979ff;
+}

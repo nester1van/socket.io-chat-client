@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { sendMessage } from '../../../redux/messages/actions';
+import './chatMessageForm.css';
 
 const ChatMessageForm = ({ currentRoom, sendMessage }) => {
   
