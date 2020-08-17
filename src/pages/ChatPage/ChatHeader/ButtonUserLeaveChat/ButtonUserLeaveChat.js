@@ -8,11 +8,11 @@ const ButtonUserLeaveChat = () => {
   };
 
   return (
-      <a 
-        className='btn-leave-chat' 
-        href='/' 
-        onClick={handleClick}
-      >Leave Chat</a>
+    <a 
+      className='btn-leave-chat' 
+      href='/' 
+      onClick={handleClick}
+    >Leave Chat</a>
   )
 };
 

@@ -13,7 +13,8 @@ export const sendMessage = (roomName, message) => async(dispatch, getState) => {
   const { userID, userName, socket } = await getState().user;
   if (socket) {
     // console.log(socket.id);
-    socket.emit('users manager', {method: 'getUserIdAndName'}, ({ userID, userName }) => {
+    socket.emit('users manager', {method: 'getUserIdAndName'},
+      ({ userID, userName }) => {
       console.log({roomName, user: {userID, userName}, message});
       socket.emit('chat message', {roomName, user: {userID, userName}, message});
     }); 

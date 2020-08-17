@@ -12,6 +12,7 @@ const debugStore = (store, isDebugging) => {
     // store.dispatch(setUserNameSocket('user1'));
     //setTimeout(() => store.dispatch(disconnectSocket()), 1000);
     
+    // // rooms
     // store.dispatch(listenUsersInRoomSocket());
     // store.dispatch(userJoinRoomSocket('room1'));
     // store.dispatch(setCurrentRoom('room5'));
@@ -20,7 +21,7 @@ const debugStore = (store, isDebugging) => {
 
     //  setTimeout(() => store.dispatch(userLiveRoomSocket('room1')), 1000);
 
-
+    // // message
     // store.dispatch(listenMessage());
     // store.dispatch(sendMessage('room1', 'message1'));
     // store.dispatch(sendMessage('room1', 'message2'));

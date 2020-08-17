@@ -5,12 +5,10 @@ import { listenUsersInRoomSocket } from '../../redux/rooms/actions';
 import { listenMessage } from '../../redux/messages/actions';
 
 const Socket = ({ children, connectSocket, listenUsersInRoomSocket, listenMessage }) => {
-  // useEffect(() => {
-    // console.log('Socket');
-    connectSocket();
-    listenUsersInRoomSocket();
-    listenMessage();
-  // }, []);
+
+  connectSocket();
+  listenUsersInRoomSocket();
+  listenMessage();
 
   return (
     <>

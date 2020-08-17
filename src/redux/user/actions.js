@@ -1,7 +1,6 @@
 import io from "socket.io-client";
 import config from '../../config';
 
-
 // action types
 export const SET_SOCKET = 'SET_SOCKET';
 export const SET_USER_ID = 'SET_USER_ID'; 
@@ -29,7 +28,8 @@ export const connectSocket = () => (dispatch, getState) => {
     const { SERVER } = config;
     const socket = io(SERVER);
     // console.log(socket);
-    socket.emit('users manager', {method: 'getUserIdAndName'}, ({ userID, userName }) => {
+    socket.emit('users manager', {method: 'getUserIdAndName'}, 
+    ({ userID, userName }) => {
       console.log(userID, userName);
       dispatch(setUserID(userID));
       dispatch(setUserName(userName));

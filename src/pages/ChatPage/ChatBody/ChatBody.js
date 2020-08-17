@@ -5,20 +5,11 @@ import Message from './Message/Message';
 import './chatBody.css';
 
 const ChatBody = ({ messages, currentRoom }) => {
-    //   messages: Array(1)
-    // 0:
-    // date: "2020-08-14T12:41:50.842Z"
-    // message: "a"
-    // roomName: "YPsaoDpwyilG3vEkAAEk"
-    // user: {userID: "i2e2MY8ijPFDy2_VAAE4", userName: "agrf"}
-    // __proto__: Object
-    // length: 1
-    // __proto__: Array(0)
+
   return (
     <ScrollToBottom className='chat-body'>
       {messages.filter(messageObj => messageObj.roomName === currentRoom)
       .map(messageObj => {
-        
         const { date, message, user: { userID, userName }} = messageObj;
         let dateObj = new Date(date);
         let hours = dateObj.getHours();

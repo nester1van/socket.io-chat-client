@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
 import { connect } from 'react-redux';
 import { Redirect, useLocation } from 'react-router-dom';
-import { userJoinRoomSocket, setCurrentRoom, userLiveRoomSocket } from '../../redux/rooms/actions';
+import { userJoinRoomSocket, setCurrentRoom } from '../../redux/rooms/actions';
 import ChatHeader from './ChatHeader/ChatHeader';
 import ChatMessageForm from './ChatMessageForm/ChatMessageForm';
 import ChatBody from './ChatBody/ChatBody';
@@ -31,7 +31,6 @@ const ChatPage = ({ userID, userName, setCurrentRoom, userJoinRoomSocket }) => {
 
   return (
     <>
-
       { !userName ?  <Redirect to={`/`}/> : 
       <div className='chat-page'>   
         <div className='chat-page__container'>

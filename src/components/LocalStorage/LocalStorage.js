@@ -1,16 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { setUserNameSocket } from '../../redux/user/actions';
 
 const LocalStorage = ({ children, setUserNameSocket }) => {
 
-  // useEffect(() => {
-    // console.log('Local storage');
-    const userName = localStorage.getItem('userName');
-    userName && setUserNameSocket(userName);
-  // }, []);
-
-  
+  const userName = localStorage.getItem('userName');
+  userName && setUserNameSocket(userName);
 
   return (
     <>
@@ -18,9 +13,5 @@ const LocalStorage = ({ children, setUserNameSocket }) => {
     </>
   )
 };
-
-const mapStateToProps = (state) => ({
-
-});
 
 export default connect(null, { setUserNameSocket })(LocalStorage);
