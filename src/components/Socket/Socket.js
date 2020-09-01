@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { connectSocket } from '../../redux/user/actions';
 import { listenUsersInRoomSocket } from '../../redux/rooms/actions';
