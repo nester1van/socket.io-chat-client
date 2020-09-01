@@ -10,6 +10,7 @@ const FormAddRoom = ({ userJoinRoomSocket }) => {
     const newRoomName = e.target['newRoomName'].value;
     console.log(newRoomName);
     userJoinRoomSocket(newRoomName);
+    e.target['newRoomName'].value = '';
   }
 
   return (
@@ -22,6 +23,7 @@ const FormAddRoom = ({ userJoinRoomSocket }) => {
         type='text'
         placeholder='Enter room name...'
         name='newRoomName'
+        required
       />
       <input
         className='form-add-room__submit'

@@ -6,7 +6,7 @@ export const SET_SOCKET = 'SET_SOCKET';
 export const SET_USER_ID = 'SET_USER_ID'; 
 export const SET_USER_NAME = 'SET_USER_NAME';
 
-// action creator
+// action creators
 export const setSocket = (socket) => ({
   type: SET_SOCKET,
   socket
@@ -22,6 +22,7 @@ export const setUserName = (userName) => ({
   userName
 });
 
+// async action creators
 export const connectSocket = () => (dispatch, getState) => {
   const socket = getState().user.socket;
   if (!socket){ // only one socket
@@ -41,7 +42,6 @@ export const disconnectSocket = () => (dispatch, getState) => {
   if (socket){
     socket.disconnect(); // note: "disconnect" makes very slowly
     dispatch(setSocket(null));
-    dispatch(setSocket(undefined));
   };
 }
 

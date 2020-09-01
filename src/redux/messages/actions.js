@@ -1,7 +1,6 @@
 // action types
 export const ADD_MESSAGE = 'ADD_MESSAGE';
 
-
 // action creators
 const addMessage = (message) => ({
   type: ADD_MESSAGE,

@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { useHistory } from "react-router-dom";
-import { userLiveRoomSocket } from '../../../../../../redux/rooms/actions';
+import { userLeaveRoomSocket } from '../../../../../../redux/rooms/actions';
 import './roomItem.css';
 
-const RoomItem = ({userID, roomName, currentRoom, userLiveRoomSocket }) => {
+const RoomItem = ({userID, roomName, currentRoom, userLeaveRoomSocket }) => {
 
   let history = useHistory();
 
@@ -13,7 +13,7 @@ const RoomItem = ({userID, roomName, currentRoom, userLiveRoomSocket }) => {
   }
 
   const handleClickDeleteRoom = () => {
-    userLiveRoomSocket(roomName);
+    userLeaveRoomSocket(roomName);
   }
 
   return (
@@ -42,4 +42,4 @@ const mapStateToProps = (state) => ({
   currentRoom: state.rooms.currentRoom
 });
 
-export default connect(mapStateToProps, { userLiveRoomSocket })(RoomItem);
+export default connect(mapStateToProps, { userLeaveRoomSocket })(RoomItem);

@@ -1,6 +1,5 @@
 // action types
 export const USER_JOIN_ROOM = 'USER_JOIN_ROOM';
-export const USER_LIVE_ROOM = 'USER_LIVE_ROOM';
 export const SET_CURRENT_ROOM = 'SET_CURRENT_ROOM';
 
 // action creators
@@ -8,11 +7,6 @@ const userJoinRoom = (roomName, usersInRoom) => ({
   type: USER_JOIN_ROOM,
   roomName,
   usersInRoom
-});
-
-const userLiveRoom = (roomName) => ({
-  type: USER_LIVE_ROOM,
-  roomName
 });
 
 export const setCurrentRoom = (currentRoom) => ({
@@ -30,7 +24,7 @@ export const userJoinRoomSocket = (roomName) => (dispatch, getState) => {
   }
 };
 
-export const userLiveRoomSocket = (roomName) => (dispatch, getState) => {
+export const userLeaveRoomSocket = (roomName) => (dispatch, getState) => {
   const socket = getState().user.socket;
   if (socket) {
     socket.emit('rooms manager', 
